@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0                                          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+<server>
+     <id>azure-auth</id>
+      <configuration>
+         <client>e11b0662-d389-4f0f-ad45-cfdfc8eef82d</client>
+         <tenant>bba43929-31b2-45e5-aec0-a774c2c1711f</tenant>
+         <key>iloveyou230395</key>
+         <environment>AZURE</environment>
+      </configuration>
+   </server>
+<activeProfiles>
+    <activeProfile>azure</activeProfile>
+</activeProfiles>
+</settings>
