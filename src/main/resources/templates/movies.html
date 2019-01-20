@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Movie Review</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" th:href="@{/movie_style.css}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div class="content_box">
+    <div class="left_bar">
+        <ul class=" nav-tabs--vertical nav" role="navigation">
+            <tr th:each = "movie : ${allMovies}" >
+                <li class="nav-item">
+                    <a th:href="|#${movie.id}|" class="nav-link active" data-toggle="tab" role="tab" th:aria-controls="${movie.id}"
+                    th:text="${movie.name}">Name</a>
+                </li>
+            </tr>
+        </ul>
+    </div>
+    <div class="right_bar ">
+        <div class="tab-content ">
+            <form th:each="movie : ${allMovies}" >
+            <div class="tab-pane fade show" role="tabpanel" th:id="${movie.id}">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Review</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="review : ${reviews}">
+                        <td th:text="${review.username}"></td>
+                        <td th:text="${review.comment}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
