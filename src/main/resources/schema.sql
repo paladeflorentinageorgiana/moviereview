@@ -1,5 +1,5 @@
-drop table user;
-drop table movie;
+drop table if exists user;
+drop table if exists movie;
 
 CREATE TABLE User(
 	id integer (5) NOT NULL,
